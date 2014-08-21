@@ -9,19 +9,20 @@ var m = new mandrill.Mandrill('qko9H7l6NJG7HJMaPKoV-Q');
 // create a variable for the API call parameters
 var params = {
     "message": {
-        "from_email":"hendrik.demolder@gmail.com",
+        "from_email":"",
         "to":[{"email":"hendrik.demolder@gmail.com"}],
-        "subject": "Sending a text email from the Mandrill API",
-        "text": "I'm learning the Mandrill API at Codecademy."
+        "subject": "Koor informatie aanvraag",
+        "text": ""
     }
 };
 
-function sendTheMail() {
-// Send the email!
-
-    m(params, function(res) {
-        log(res);
+function sendTheMail(naam, emailaddress, formmodal) {
+    params.message.from_email = emailaddress;
+    params.message.text = 'Ik ' + naam  + ' had graag meer informatie ontvangen contacteer mij op het volgende emailaddress ' + emailaddress
+    m.messages.send(params, function(res) {
+         $(formmodal).modal('hide');
+        return true;
     }, function(err) {
-        log(err);
+        return false;
     });
 }

@@ -232,7 +232,7 @@ a:focus {
 .agenda-section {
   width: 100%;
   padding: 0;
-  color: #ffffff;
+  color: #000000;
   background-color: #ffffff;
   background: url(../img/agenda-bg.jpg) no-repeat bottom center scroll;
   -webkit-background-size: cover;
@@ -240,12 +240,37 @@ a:focus {
   background-size: cover;
   -o-background-size: cover;
 }
+.agenda-section .agenda {
+  font-size: 18px;
+  color: #ffffff;
+}
 .meezingen-section {
   width: 100%;
-  padding: 0;
+  padding: 100px;
   color: #ffffff;
   background-color: #ffffff;
   background: url(../img/meezingen-bg.jpg) no-repeat bottom center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+.media-section {
+  width: 100%;
+  padding: 100px;
+  color: #000000;
+  background-color: #ffffff;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+.contact-section {
+  width: 100%;
+  padding: 100px;
+  color: #ffffff;
+  background-color: #000000;
+  background: url(../img/contact-bg.jpg) no-repeat bottom center scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;

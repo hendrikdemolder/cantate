@@ -150,6 +150,8 @@ a {
     }
 }
 
+
+
 @media(min-width:767px) {
     .intro {
         height: 100%;
@@ -266,22 +268,27 @@ a {
 }
 
 
+
 .agenda-section{
   width: 100%;
   padding: 0;
-  color: @light;
+  color: @dark;
   background-color: @light;
   background: url(../img/agenda-bg.jpg) no-repeat bottom center scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
+  .agenda {
+      font-size: 18px;
+      color: @light
+  }
 }
 
 
 .meezingen-section{
   width: 100%;
-  padding: 0;
+  padding: 100px;
   color: @light;
   background-color: @light;
   background: url(../img/meezingen-bg.jpg) no-repeat bottom center scroll;
@@ -290,6 +297,31 @@ a {
   background-size: cover;
   -o-background-size: cover;
 }
+
+.media-section{
+  width: 100%;
+  padding: 100px;
+  color: @dark;
+  background-color: @light;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+
+.contact-section{
+  width: 100%;
+  padding: 100px;
+  color: @light;
+  background-color: @dark;
+  background: url(../img/contact-bg.jpg) no-repeat bottom center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
 
 #map {
     width: 100%;
