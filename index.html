@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
     <meta charset="utf-8">
@@ -83,7 +82,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
+                        <h3 class="brand-small">Gemengd Koor</h3>
                         <h1 class="brand-heading">Cantate</h1>
+                        <h3 class="brand-small">Aarschot</h3>
                         <p class="intro-text">.</p>
                         <a href="#about" class="btn btn-circle page-scroll">
                             <i class="fa fa-angle-double-down animated"></i>
@@ -165,7 +166,7 @@ neem dan gerust contact op! Klik hiervoor op “meezingen”
     <section id="meezingen" class="meezingen-section container content-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <h2>Meezingen met Canate?</h2>
+                <h2>Meezingen met Cantate?</h2>
                 <p>
                 Wij zijn steeds op zoek naar enthousiaste mensen om met ons mee te zingen.
 
@@ -174,16 +175,47 @@ neem dan gerust contact op! Klik hiervoor op “meezingen”
                 jou contact op. Je kan dan vrijblijvend komen luisteren tijdens een repetitie of optreden.
               </p>
                 <p> Donderdagavond van 20.00 u tot 22.00 u, niet tijdens de schoolvakanties</p>
-                <p><a href="mailto:info@cantate.be">info@cantate.be</a>
-                <p>Telefoon: 03/432.342.432</p>
-                <!-- Map Section -->
-                <div id="map"></div>
-                <p></p>
-
+                <p><a href="mailto:tinekeverlooy@hotmail.com">Mail</a>
+                   Telefoon: 0485/399082
+                <!-- Button trigger modal -->
+               <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#registrationModal">
+                Neem Contact
+              </button>
             </div>
 
         </div>
     </section>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="registrationModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+          <h4 class="modal-title" id="myModalLabel">Neem contact met Cantate!</h4>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+              <div class="form-group">
+                 <label for="name">Naam</label>
+                 <input type="text" class="form-control" id="naam" placeholder="Naam">
+              </div>
+              <div class="form-group">
+                 <label for="emailaddress">Email adres</label>
+                 <input type="email" class="form-control" id="emailaddress" placeholder="Email adres">
+              </div>
+
+          </form>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" onclick="sendTheMail(); return false;" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
     <!-- Dirigente Secton -->
@@ -296,6 +328,9 @@ Beatae Mariae van Tienen. Tineke werkt als leerkracht AMV en Samenzang aan haar 
 
     <!-- Custom Theme JavaScript -->
     <script src="js/grayscale.js"></script>
+
+     <script type="text/javascript" src="https://mandrillapp.com/api/docs/js/mandrill.js"></script>
+     <script type="text/javascript" src="js/send-email.js"></script>
 
 </body>
 
