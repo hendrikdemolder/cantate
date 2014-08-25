@@ -16,9 +16,10 @@ var params = {
     }
 };
 
-function sendTheMail(naam, emailaddress, formmodal) {
+function sendTheMail(naam, emailaddress, telefoonnummer, bericht,  formmodal) {
     params.message.from_email = emailaddress;
     params.message.text = 'Ik ' + naam  + ' had graag meer informatie ontvangen contacteer mij op het volgende emailaddress ' + emailaddress
+    params.message.text = params.message.text + '\n' + 'Telefoonnummer: ' + telefoonnummer + '\nExtra: ' + bericht 
     m.messages.send(params, function(res) {
          $(formmodal).modal('hide');
         return true;

@@ -21,6 +21,9 @@ h6 {
   font-weight: 700;
   letter-spacing: 1px;
 }
+table {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
 p {
   margin: 0 0 25px;
   font-size: 18px;
@@ -125,7 +128,7 @@ a:focus {
 }
 .intro .intro-body .brand-heading {
   font-size: 40px;
-  color: #3b4218;
+  color: #99ff66;
 }
 .intro .intro-body .intro-text {
   font-size: 18px;
@@ -248,6 +251,7 @@ a:focus {
   width: 100%;
   padding: 100px;
   color: #ffffff;
+  text-shadow: 0 0 10px black;
   background-color: #ffffff;
   background: url(../img/meezingen-bg.jpg) no-repeat bottom center scroll;
   -webkit-background-size: cover;
