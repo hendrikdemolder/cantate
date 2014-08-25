@@ -10,7 +10,7 @@ var m = new mandrill.Mandrill('qko9H7l6NJG7HJMaPKoV-Q');
 var params = {
     "message": {
         "from_email":"",
-        "to":[{"email":"hendrik.demolder@gmail.com"}],
+        "to":[{"email":"tinekeverlooy@hotmail.com"}],
         "subject": "Koor informatie aanvraag",
         "text": ""
     }
@@ -19,7 +19,7 @@ var params = {
 function sendTheMail(naam, emailaddress, telefoonnummer, bericht,  formmodal) {
     params.message.from_email = emailaddress;
     params.message.text = 'Ik ' + naam  + ' had graag meer informatie ontvangen contacteer mij op het volgende emailaddress ' + emailaddress
-    params.message.text = params.message.text + '\n' + 'Telefoonnummer: ' + telefoonnummer + '\nExtra: ' + bericht 
+    params.message.text = params.message.text + '\n' + 'Telefoonnummer: ' + telefoonnummer + '\nExtra: ' + bericht
     m.messages.send(params, function(res) {
          $(formmodal).modal('hide');
         return true;
