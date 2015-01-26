@@ -113,6 +113,61 @@
             </div>
         </div>
 	</header>
+	
+	
+	  <!-- Modal -->
+  <div class="modal fade" id="brunchModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+          <h4 class="modal-title" id="myModalLabel">Schrijf je in voor de Brunch!</h4>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+              <div class="form-group">
+                 <label for="name">Naam</label>
+                 <input type="text" class="form-control" id="naam" placeholder="Naam">
+              </div>
+              <div class="form-group">
+                 <label for="emailaddress">Email adres</label>
+                 <input type="email" class="form-control" id="emailaddress" placeholder="Email adres">
+              </div>
+              <div class="form-group">
+                 <label for="Telefoonnummer">Telefoonnummer (Optioneel)</label>
+                 <input type="text" class="form-control" id="telefoon" placeholder="Telefoon Nummer">
+              </div>
+              <div class="form-group">
+              	<label for="nrmax3">Aantal deelnemers jonger dan 4 jaar (gratis) </label>
+              	<input type="number" class="form-control" id="nrmax3" min="0" placeholder="0">
+              </div>
+                 <div class="form-group">
+              	<label for="nrmax12">Aantal Deelnemers tussen 4 en 12 jaar (8 euro) </label>
+              	<input type="number" class="form-control" id="nrmax12" min="0" placeholder="0">
+              </div>
+              <div class="form-group">
+              	<label for="nrmin12">Aantal volwassenen (ouder dan 12 jaar) (15 euro) </label>
+              	<input type="number" class="form-control" id="nrmin12" min="0" placeholder="0">
+              </div>
+              <div class="form-group">
+              	<label for="uuraankomst">Uur van aankomst (optioneel)</label>
+              	<input type="text" class="form-control" id="uuraankomst" placeholder="optioneel">
+              </div>
+              <div class="form-group">
+                <label for="extra">Extra informatie(optioneel)</lable>
+                  <textarea class="form-control" rows="3" id="message"></textarea>
+                </div>
+          </form>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" onclick="sendTheMail($('#naam').val(), $('#emailaddress').val(), $('#telefoon').val(),$('#message').val(),'#registrationModal');" class="btn btn-primary">Verzend gegevens</button>
+      </div>
+        </div>
+    </div>
+  </div>
+
 
     <!-- About Section -->
     <section id="about" class="about-section container content-section text-center">
