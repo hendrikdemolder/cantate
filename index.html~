@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Cantate Aarschot</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/grayscale.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    <i class="fa fa-play-circle"></i>  <span class="light">Start</span> Cantate
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">Over Cantate</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#meezingen">Meezingen?</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#dirigente">Dirigente</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#agenda">Agenda</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#media">Media</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Intro Header -->
+	<!--    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h3 class="brand-small">Gemengd Koor</h3>
+                        <h1 class="brand-heading">Cantate</h1>
+                        <h3 class="brand-small">Aarschot</h3>
+                        <p class="intro-text">.</p>
+                        <a href="#about" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</header>
+ -->
+
+ <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+
+                          <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#brunchModal">
+                Schrijf je in voor de Brunch!
+              </button> 
+                <div class="row">
+		        <div class="col-md-8 col-md-offset-2">
+                        <p class="intro-text"></p>                                             <a href="#about" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+					</div>
+                </div>
+            </div>
+        </div>
+	</header>
+	
+	
+	  <!-- Modal -->
+  <div class="modal fade" id="brunchModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+          <h4 class="modal-title" id="myModalLabel">Schrijf je in voor de Brunch!</h4>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+              <div class="form-group">
+                 <label for="name">Naam</label>
+                 <input type="text" class="form-control" id="naam" placeholder="Naam">
+              </div>
+              <div class="form-group">
+                 <label for="emailaddress">Email adres</label>
+                 <input type="email" class="form-control" id="emailaddress" placeholder="Email adres">
+              </div>
+              <div class="form-group">
+                 <label for="Telefoonnummer">Telefoonnummer (Optioneel)</label>
+                 <input type="text" class="form-control" id="telefoon" placeholder="Telefoon Nummer">
+              </div>
+              <div class="form-group">
+              	<label for="nrmax3">Aantal deelnemers jonger dan 4 jaar (gratis) </label>
+              	<input type="number" class="form-control" id="nrmax3" min="0" placeholder="0">
+              </div>
+                 <div class="form-group">
+              	<label for="nrmax12">Aantal Deelnemers tussen 4 en 12 jaar (8 euro) </label>
+              	<input type="number" class="form-control" id="nrmax12" min="0" placeholder="0">
+              </div>
+              <div class="form-group">
+              	<label for="nrmin12">Aantal volwassenen (ouder dan 12 jaar) (15 euro) </label>
+              	<input type="number" class="form-control" id="nrmin12" min="0" placeholder="0">
+              </div>
+              <div class="form-group">
+              	<label for="uuraankomst">Uur van aankomst (optioneel)</label>
+              	<input type="text" class="form-control" id="uuraankomst" placeholder="optioneel">
+              </div>
+            </form>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" onclick="sendTheMail($('#naam').val(), $('#emailaddress').val(), $('#telefoon').val(),$('#message').val(),'#registrationModal');" class="btn btn-primary">Verzend gegevens</button>
+      </div>
+        </div>
+    </div>
+  </div>
+
+
+    <!-- About Section -->
+    <section id="about" class="about-section container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Zo zingen dat zingen muziek wordt!</h2>
+                <p>Onder dit motto richtte Frans Lambrechts in oktober 1965 het vierstemmig gemengd koor
+
+Cantate op. Tot op vandaag blijft dit motto onze drijvende kracht: de noten die op de partituur
+
+staan vertalen in een muzikale emotie die zowel de uitvoerders als het publiek raakt tot in hun
+
+diepste vezels.</p>
+
+<p>De muziek die daartoe gebruikt werd in de loop van deze bijna 50 jaar varieert van Schütz, Fauré, Bach en Händel tot gospel en hedendaagse werken van Vlaamse componisten.
+
+Op die wijze “muziek maken” vereist dan ook meer dan een verzameling van stemmen: het
+
+vraagt om een vereniging van mensen die met plezier komen zingen, die als het ware echte
+
+liefhebbers zijn.</p>
+
+<p>Daarom neemt Cantate, naast uitvoeringen van gekende klassieke werken, ook deel aan leuke
+
+muziekfestivals, zoals “Aarschot Volkoren”. Cantate ligt overigens mee aan de
+
+basis van dit voor ons land uniek initiatief. </p>
+
+<p>En daarom ook organiseert Cantate geregeld activiteiten waar zingen iets minder centraal
+
+staat: een weekend in de Ardennen, een brunch of een wandeling om het werkjaar af te sluiten, enz...
+
+Op deze activiteiten nodigen we uiteraard ook de familie van de koorleden uit, want hun steun aan onze werking is voor ons ontzettend
+
+belangrijk.</p>
+
+<p>
+Om dit alles te realiseren streven wij naar een goede mengeling van ervaren koorleden en
+
+jonge enthousiaste mensen die enige voeling hebben met klassieke muziek maar die vooral
+
+heel veel goesting hebben om zo te zingen dat zingen muziek wordt.
+
+Dankzij haar professionele vorming zorgt Tineke Verlooy (zie dirigente) met heel veel
+
+kennis van zaken en een onnavolgbaar aanstekelijk enthousiasme voor de muzikale leiding.</p>
+
+<p>
+Alle andere koorleden zorgen voor de rest en als jij zin hebt om daar deel van uit te maken,
+
+neem dan gerust contact op! Klik hiervoor op “meezingen”
+</p>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="meezingen" class="meezingen-section container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Meezingen met Cantate?</h2>
+                <p>
+                Wij zijn steeds op zoek naar enthousiaste mensen om met ons mee te zingen.
+
+                Heb je zin om met ons kennis te maken? Vul het onderstaand formulier in en we nemen met
+
+                jou contact op. Je kan dan vrijblijvend komen luisteren tijdens een repetitie of optreden.
+              </p>
+                <p> Donderdagavond van 20.00 u tot 22.00 u, niet tijdens de schoolvakanties</p>
+                <p> Aula van het St. Jozefscollege, Schaluin 28 in Aarschot </p>
+                <p> Telefoon: 0479/011368 </p>
+                <!-- Button trigger modal -->
+               <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#registrationModal">
+                Neem Contact
+              </button>
+            </div>
+        </div>
+    </section>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="registrationModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+          <h4 class="modal-title" id="myModalLabel">Neem contact met Cantate!</h4>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+              <div class="form-group">
+                 <label for="name">Naam</label>
+                 <input type="text" class="form-control" id="naam" placeholder="Naam">
+              </div>
+              <div class="form-group">
+                 <label for="emailaddress">Email adres</label>
+                 <input type="email" class="form-control" id="emailaddress" placeholder="Email adres">
+              </div>
+              <div class="form-group">
+                 <label for="Telefoonnummer">Telefoonnummer(Optioneel)</label>
+                 <input type="text" class="form-control" id="telefoon" placeholder="Telefoon Nummer">
+              </div>
+              <div class="form-group">
+                <label for="extra">Extra informatie(optioneel)</lable>
+                  <textarea class="form-control" rows="3" id="message"></textarea>
+                </div>
+
+
+          </form>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" onclick="sendTheMail($('#naam').val(), $('#emailaddress').val(), $('#telefoon').val(),$('#message').val(),'#registrationModal');" class="btn btn-primary">Verzend gegevens</button>
+      </div>
+        </div>
+    </div>
+  </div>
+
+
+    <!-- Dirigente Secton -->
+    <section id="dirigente" class="content-section text-center">
+        <div class="download-section">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2> Dirigente </h2>
+                    <p> Tineke Verlooy (°1979, Ukkel) begon haar muzikale vorming aan de Gemeentelijke Academie voor Muziek, Woord en Dans te Grimbergen, waar zij blokfluit, dwarsfluit, barokhobo en zang volgde.</p>
+                        <p>Na haar humaniora startte zij dan haar hogere opleiding aan het Lemmensinstituut te Leuven in de richting Meester in de Muziek, optie muziektheorie-schriftuur en finaliteit in de muziekpedagogie (2002).</p>
+                        <p> Sindsdien is zij werkzaam als leerkracht AMV en Samenzang aan haar oude academie te Grimbergen.
+                         Tijdens haar opleiding was zij reeds vier jaar actief als dirigente van het Leuvense solidariteitskoor PatiPati en rees zo de interesse voor een tweede studie.</p>
+                         <p>Met het diploma Meester in de Muziek met de finaliteit koordirectie (leerling van Kurt Bikkembergs) op zak dirigeerde ze intussen o.a. het Brussels Kamerkoor Kantilene, het Leuvens Universitair Koor en de Capella Beatae Mariae van Tienen.
+                         Het gemengd koor Cantate Aarschot staat al sinds 2006 onder haar leiding.</p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- agenda Section -->
+    <section id="agenda" class="agenda-section container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2 class=agenda>Agenda</h2>
+                <table class="table table-striped">
+                <tr><th style="text-align:center"> Activiteit</th> <th style="text-align:center">Datum</th>  <th style="text-align:center">Plaats</th></tr>
+                <tr class="success"> <td> Start Werkjaar </td><td>04/09/2014</td><td>St-Jozef College Aarschot </td></tr>
+                <tr class="success"> <td> Koorweekend De Fiertel te Ronse</td><td>24-27/10/2014</td><td>Ronse</td></tr>
+                <tr class="success"> <td> Kerstconcert </td> <td>Vrijdag 12 december 2014 20.30u(Grimbergen)/Zaterdag 13 december 20.30u(Aarschot)</td><td> Aarschot(Gasthuiskerk)/Grimbergen(OLV-Kerk) </td></tr>
+                <tr class="success"> <td> Brunch </td> <td>Zondag 29 maart 2015 9:00 tot 13:00 </td> <td> St-Jozef College Aaarschot</td></tr>
+                <tr class="success"> <td> Aarschot Volkoren </td> <td> September 2015</td> <td> Aarschot</td></tr>
+                <tr class="success"> <td> Cantate 50 jaar </td> <td> 6/03/2016</td> <td> Aarschot </td></tr>
+                <tr class="success"> <td> Aarschot Volkoren 2 </td> <td> September 2015</td> <td> Aarschot</td></tr>
+
+                </table>
+            </div>
+        </div>
+    </section>
+
+
+        <!-- media Section -->
+        <section id="media" class="media-section container content-section text-center">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2 class=media>Media</h2>
+                    <h3 class=media-intro> Bekijk audio of video van vorige concerten en activiteiten</h3>
+                    <h3 class=media-intro> (UNDER CONSTRUCTION)</h3>
+                </div>
+            </div>
+        </section>
+
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2" text-shadow: 3px 3px 0px #000;>
+                <h2>Contacteer Cantate</h2>
+                <p>Contacteer ons gerust voor meer informatie</p>
+                <p><a href="mailto:tinekeverlooy@hotmail.com">Mail</a>
+                <p>Telefoon: 0485/399082</p>
+                </p>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>Copyright &copy; Cantate 2014</p>
+        </div>
+    </footer>
+
+    <!-- jQuery Version 1.11.0 -->
+    <script src="js/jquery-1.11.0.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/grayscale.js"></script>
+
+     <script type="text/javascript" src="https://mandrillapp.com/api/docs/js/mandrill.js"></script>
+     <script type="text/javascript" src="js/send-email.js"></script>
+
+</body>
+
+</html>

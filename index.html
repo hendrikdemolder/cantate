@@ -99,13 +99,13 @@
  <header class="intro">
         <div class="intro-body">
             <div class="container">
-                <div class="row">
-		        <div class="col-md-8 col-md-offset-2">
-                        <p class="intro-text"></p>
+
                           <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#brunchModal">
                 Schrijf je in voor de Brunch!
-              </button>
-                        <a href="#about" class="btn btn-circle page-scroll">
+              </button> 
+                <div class="row">
+		        <div class="col-md-8 col-md-offset-2">
+                        <p class="intro-text"></p>                                             <a href="#about" class="btn btn-circle page-scroll">
                             <i class="fa fa-angle-double-down animated"></i>
                         </a>
 					</div>
@@ -153,16 +153,12 @@
               	<label for="uuraankomst">Uur van aankomst (optioneel)</label>
               	<input type="text" class="form-control" id="uuraankomst" placeholder="optioneel">
               </div>
-              <div class="form-group">
-                <label for="extra">Extra informatie(optioneel)</lable>
-                  <textarea class="form-control" rows="3" id="message"></textarea>
-                </div>
-          </form>
+            </form>
 
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <button type="button" onclick="sendTheMail($('#naam').val(), $('#emailaddress').val(), $('#telefoon').val(),$('#message').val(),'#registrationModal');" class="btn btn-primary">Verzend gegevens</button>
+          <button type="button" onclick="sendTheMail_brunch($('#naam').val(), $('#emailaddress').val(), $('#telefoon').val(),$('#nrmax3').val(), $('#nrmax12').val(), $('#nrmin12').val(), $('#uuraankomst').val(), '#brunchModal');" class="btn btn-primary">Verzend gegevens</button>
       </div>
         </div>
     </div>
