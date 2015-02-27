@@ -295,19 +295,19 @@ neem dan gerust contact op! Klik hiervoor op “meezingen”
           <form role="form">
               <div class="form-group">
                  <label for="name">Naam</label>
-                 <input type="text" class="form-control" id="naam" placeholder="Naam">
+                 <input type="text" class="form-control" id="naam_info" placeholder="Naam">
               </div>
               <div class="form-group">
                  <label for="emailaddress">Email adres</label>
-                 <input type="email" class="form-control" id="emailaddress" placeholder="Email adres">
+                 <input type="email" class="form-control" id="emailaddress_info" placeholder="Email adres">
               </div>
               <div class="form-group">
                  <label for="Telefoonnummer">Telefoonnummer(Optioneel)</label>
-                 <input type="text" class="form-control" id="telefoon" placeholder="Telefoon Nummer">
+                 <input type="text" class="form-control" id="telefoon_info" placeholder="Telefoon Nummer">
               </div>
               <div class="form-group">
                 <label for="extra">Extra informatie(optioneel)</lable>
-                  <textarea class="form-control" rows="3" id="message"></textarea>
+                  <textarea class="form-control" rows="3" id="message_info"></textarea>
                 </div>
 
 
@@ -316,7 +316,7 @@ neem dan gerust contact op! Klik hiervoor op “meezingen”
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <button type="button" onclick="sendTheMail($('#naam').val(), $('#emailaddress').val(), $('#telefoon').val(),$('#message').val(),'#registrationModal');" class="btn btn-primary">Verzend gegevens</button>
+          <button type="button" onclick="sendTheMail($('#naam_info').val(), $('#emailaddress_info').val(), $('#telefoon_info').val(),$('#message_info').val(),'#registrationModal');" class="btn btn-primary">Verzend gegevens</button>
       </div>
         </div>
     </div>
