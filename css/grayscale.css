@@ -115,12 +115,12 @@ a:focus {
   padding: 100px 0;
   text-align: center;
   color: #ffffff;
-  background: url(../img/cantate_2015_affiche_cut.jpg) no-repeat bottom center scroll;
+  background: url(../img/cantate_2015_affiche_scaled.jpg) no-repeat bottom center scroll;
   background-color: #000000;
-  -webkit-background-size: auto;
-  -moz-background-size: auto;
-  background-size: auto;
-  -o-background-size: auto;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  background-size: contain;
+  -o-background-size: contain;
 }
 .intro .intro-body {
   display: table-cell;
