@@ -335,9 +335,19 @@ ul.banner-social-buttons {
     margin-bottom: 0;
   }
 }
+
 footer {
   padding: 50px 0;
 }
+
+a.brunch {
+  color: red;
+}
+
+.brunch {
+  color:red;
+}
+
 footer p {
   margin: 0;
 }

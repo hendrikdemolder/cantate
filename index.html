@@ -52,6 +52,9 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
+                      <a class="page-scroll brunch" href="#brunch">Brunch!</a>
+                    </li>
+                    <li>
                         <a class="page-scroll" href="#about">Over Cantate</a>
                     </li>
                     <li>
@@ -99,11 +102,17 @@
  <header class="intro">
         <div class="intro-body">
             <div class="container">
+               <div class="col-md-2 col-md-offset-10">
+              <button class="brunch btn btn-link" data-toggle="modal" data-target="#concertModal">
+              Bestel Toegangskaarten!
+             </button>
+           </div>
 	      <br>
 	      <br>
                 <div class="row">
 		        <div class="col-md-8 col-md-offset-2">
-                        <p class="intro-text"></p>                                             <a href="#about" class="btn btn-circle page-scroll">
+                        <p class="intro-text"></p>
+                        <a href="#about" class="btn btn-circle page-scroll">
                             <i class="fa fa-angle-double-down animated"></i>
                         </a>
 					</div>
@@ -114,6 +123,26 @@
 
 
 	  <!-- Modal -->
+
+    <div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title" id="myModalLabel">Probleem bij het verzenden</h4>
+  	  <br>
+  	  <p>
+  	  Er was een probleem bij het verzenden. Probeer opnieuw en controleer of alles goed is ingevuld. Probeer eventueel later opnieuw!.
+      <br>
+      Mail naar info.cantate@gmail.com wanneer het probleem blijft duren!.
+  	  </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
   <div class="modal fade" id="brunchModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -160,11 +189,91 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <button type="button" onclick="sendTheMail_brunch($('#naam').val(), $('#emailaddress').val(), $('#telefoon').val(),$('#nrmax3').val(), $('#nrmax12').val(), $('#nrmin12').val(), $('#uuraankomst').val(), '#brunchModal');" class="btn btn-primary">Verzend gegevens</button>
+          <button type="button" onclick="sendTheMail_brunch($('#naam').val(), $('#emailaddress').val(), $('#telefoon').val(),$('#nrmax3').val(), $('#nrmax12').val(), $('#nrmin12').val(), $('#uuraankomst').val(), '#brunchModal', '#errorModal');" class="btn btn-primary">Verzend gegevens</button>
       </div>
         </div>
     </div>
   </div>
+
+  <!-- Modal -->
+<div class="modal fade" id="concertModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Bestel kaarten voor het concert!</h4>
+  <br>
+  <p>
+  Uw inschrijving wordt definitief van zodra u het gepaste bedrag hebt gestort op het rekeningnummer BE49 0016 9744 8971 van Cantate met de vermelding <b>"Concert + uw Naam"</b>
+  </p>
+      </div>
+      <div class="modal-body">
+        <form role="form">
+            <div class="form-group">
+               <label for="name">Naam</label>
+               <input type="text" class="form-control" id="naam_optreden" placeholder="Naam">
+            </div>
+            <div class="form-group">
+               <label for="emailaddress">Email adres</label>
+               <input type="email" class="form-control" id="emailaddress_optreden" placeholder="Email adres">
+            </div>
+            <div class="form-group">
+               <label for="Telefoonnummer">Telefoonnummer (Optioneel)</label>
+               <input type="text" class="form-control" id="telefoon_optreden" placeholder="Telefoon Nummer">
+            </div>
+            <div class="form-group">
+              <label for="nrmax3">Aantal kaarten jonger dan 18 jaar (7 Euro) </label>
+              <input type="number" class="form-control" id="min18" min="0" placeholder="0">
+            </div>
+               <div class="form-group">
+              <label for="nrmax12">Aantal kaarten ouder dan 18 jaar (15 Euro)</label>
+              <input type="number" class="form-control" id="plus18" min="0" placeholder="0">
+            </div>
+            <div class="form-group">
+              <label for="extra">Extra informatie(optioneel)</label>
+                <textarea class="form-control" rows="3" id="message_info_optreden"></textarea>
+              </div>
+          </form>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" onclick="sendTheMail_optreden($('#naam_optreden').val(), $('#emailaddress_optreden').val(), $('#telefoon_optreden').val(),$('#plus18').val(), $('#min18').val(),  $('#message_info_optreden').val(), '#concertModal', '#errorModal');" class="btn btn-primary">Verzend gegevens</button>
+    </div>
+      </div>
+  </div>
+</div>
+
+
+
+  <section id="brunch" class="about-section container content-section text-center">
+         <div class="row">
+             <div class="col-lg-8 col-lg-offset-2">I
+ <h2>CANTATE organiseert BRUNCH</h2>
+ <p>
+ Geen zin om ’s zondags vroeg op te staan en naar de bakker te lopen?  Geen tijd gehad om broodbeleg te kopen in de winkel?  Geen probleem!
+ </p>
+ <p>
+ Op zondag 20 maart 2016 kan je van 9 tot 13 uur genieten van een uitgebreid ontbijtbuffet, na het enorm succes van de vorige jaren opnieuw georganiseerd door het Aarschots gemengd koor CANTATE.  Deze brunch gaat door in de Blauwe Zaal van het Sint-Jozefscollege op het Schaluin.
+
+ Heerlijke broodjes en koffiekoeken, spek en ei, worstjes, rijstpap met bruine suiker, croque monsieurs, warme en koude dranken en nog veel ander lekkers “à volonté” zijn verkrijgbaar voor de prijs van € 8 (van 3 tot 10 jaar) of € 15 (vanaf 11 jaar).
+ </p>
+
+ <p>
+ Gezien het grote succes van de vorige jaren is het aantal plaatsen helaas niet onbeperkt.
+ Er op tijd bij zijn is dus de boodschap!
+ Op de dag zelf kan u ook aan de kassa terecht.
+ <br>
+
+ Warm aanbevolen!
+ </p>
+ <br>
+
+               <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#brunchModal">
+                 Schrijf je in voor de Brunch!
+               </button>
+              </div>
+        </div>
 
 
 
@@ -282,7 +391,7 @@ neem dan gerust contact op! Klik hiervoor op “meezingen”
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <button type="button" onclick="sendTheMail($('#naam_info').val(), $('#emailaddress_info').val(), $('#telefoon_info').val(),$('#message_info').val(),'#registrationModal');" class="btn btn-primary">Verzend gegevens</button>
+          <button type="button" onclick="sendTheMail($('#naam_info').val(), $('#emailaddress_info').val(), $('#telefoon_info').val(),$('#message_info').val(),'#registrationModal', '#errorModal');" class="btn btn-primary">Verzend gegevens</button>
       </div>
         </div>
     </div>
@@ -319,7 +428,7 @@ neem dan gerust contact op! Klik hiervoor op “meezingen”
                 <tr class="success"> <td> Start  repetities « Requiem » van  Fauré en « Via Crucis » van Liszt </td> <td> Donderdag 17 September 2015</td><td> Aarschot </td> </tr>
                 <tr class="success"> <td> Koorweekend  Bosberg Houthalen </td> <td> 23 - 25 Oktober 2015 </td> <td> Houthalen </td> </tr>
                 <tr class="success"> <td> Jubileumconcert Fauré (Requiem) en Liszt (Via Crucis) </td>  <td> Zondag 28 Februari 2016 <br> 16 uur </td> <td>  St-Stefanus Kerk Val-Meer</td> </tr>
-                <tr class="success"> <td> Jubileumconcert Fauré (Requiem) en Liszt (Via Crucis) </td>  <td> Zaterdag 5 Maart 2016 <br> 20 uur </td> <td> St-Martinus Kerk Wezemaal  </td> </tr>
+                <tr class="success"> <td> Jubileumconcert Fauré (Requiem) en Liszt (Via Crucis) </td>  <td> Zbaterdag 5 Maart 2016 <br> 20 uur </td> <td> St-Martinus Kerk Wezemaal  </td> </tr>
                 <tr class="success"> <td> Brunch </td>  <td> Zondag 20 Maart 2016 <br> 9 - 13 uur </td> <td> Aarschot </td> </tr>
                 <tr class="success"> <td> Champagnereis </td>  <td> 1-4 juli 2016 </td> <td> Frankrijk! </td> </tr>
                 <tr class="success"> <td> Jubileum BBQ voor huidige en oud Cantate leden en partners </td> <td> 11 September 2016 </td> <td> Aarschot </td> </tr>
