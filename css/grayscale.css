@@ -111,16 +111,16 @@ a:focus {
 .intro {
   display: table;
   width: 100%;
-  height: auto;
+  height: 100%;
   padding: 100px 0;
   text-align: center;
   color: #ffffff;
-  background: url(../img/brunch.jpg) no-repeat bottom center scroll;
+  background: url(../img/test1.jpg) no-repeat bottom center scroll;
   background-color: #ffffff;
-  -webkit-background-size: contact;
-  -moz-background-size: contain;
-  background-size: contain;
-  -o-background-size: contain;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
 }
 .intro .intro-body {
   display: table-cell;
@@ -132,7 +132,17 @@ a:focus {
 }
 .intro .intro-body .intro-text {
   font-size: 18px;
+  color:#000000;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+
+
+.intro-meezingen {
+  font-size: 25px;
+  color:red;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
 @media (min-width: 767px) {
   .intro {
     height: 100%;
