@@ -4,7 +4,7 @@ function log(obj) {
 }
 
 // create a new instance of the Mandrill class with your API key
-var m = new mandrill.Mandrill('qko9H7l6NJG7HJMaPKoV-Q');
+
 
 // create a variable for the API call parameters
 var params = {
@@ -45,31 +45,32 @@ var params_success= {
 
 
 function sendTheMail(naam, emailaddress, telefoonnummer, bericht,  formmodal, errormodal) {
-    params.message.from_email = emailaddress;
-    params.message.text = 'Ik ' + naam  + ' had graag meer informatie ontvangen contacteer mij op het volgende emailaddress ' + emailaddress
-    params.message.text = params.message.text + '\n' + 'Telefoonnummer: ' + telefoonnummer + '\nExtra: ' + bericht
-    params_success.message.to = []
-    params_success.message.to.push({"email":emailaddress})
-    params_success.message.text = "We hebben uw vraag voor meer informatie goed ontvangen! We proberen zo snel mogelijk te reageren op je vraag. \nNeem gerust nog eens contact op via ons email adres info.cantate@gmail.com indien u geen reactie krijgt!"
-    params_success.message.subject = "Informatie aanvraag"
-
-    m.messages.send(params, function(res) {
-         m.messages.send(params_success, function(res) {
-              $(formmodal).modal('hide');
-              return true;
-         }, function(err) {
-           $(formmodal).modal('hide');
-           $(errormodal).modal('show');
-         })
-    }, function(err) {
-      $(formmodal).modal('hide');
-      $(errormodal).modal('show');
-    });
-
-
-
+  data = {}
+  data['type']= 'information_mail'
+  data['naam'] = naam
+  data['emailaddress'] = emailaddress
+  data['telefoonnummer'] = telefoonnummer
+  data['bericht'] = bericht
+  data['formmodal'] = formmodal
+  data['errormodal'] = errormodal
+  sendMail(data)
 
 }
+
+
+function sendMail(data) {
+  var params  = jQuery.param( data );
+  $.ajax({
+  dataType: 'json',
+  url: 'https://script.google.com/macros/s/AKfycbwRu5RtHITor3Y4nMzaMQztYfiEKm8Gk7oRtHJCimLcEJJX4E72/exec?' + params,
+  success: function() { $(data['formmodal']).modal('hide')},
+  error: function(error, textStatus, errorThrown) {
+    $(data['formmodal']).modal('hide')
+    $(data['formmodal']).modal('show')}
+});
+}
+
+//sendTheMail('Hendrik Demolder', 'hendrik.demolder@gmail.com', '0498430378', 'Ik zou graag meer informatie ontvangen')
 
 function sendTheMail_brunch(naam, emailaddress, telefoonnummer, nrmax3, nrmax12, nrmin12, uuraankomst ,  formmodal, errormodal) {
     params_brunch.message.from_email = emailaddress;
@@ -125,3 +126,5 @@ function sendTheMail_optreden(naam, emailaddress, telefoonnummer, aantal, aantal
       $(errormodal).modal('show');
     });
 }
+
+
