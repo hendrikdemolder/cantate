@@ -57,6 +57,19 @@ function sendTheMail(naam, emailaddress, telefoonnummer, bericht,  formmodal, er
 
 }
 
+function sendbbqMail(naam, emailaddress, telefoonnummer, koorleden, nrmax12, nrmin12,formmodal, errormodal) {
+  data = {}
+  data['type'] = 'bbq_mail'
+  data['naam'] = naam
+  data['emailaddress'] = emailaddress
+  data['telefoonnummer'] = telefoonnummer
+  data['koorleden'] = koorleden
+  data['nrmax12']  = nrmax12
+  data['nrmin12']  = nrmin12
+  data['formmodal'] = formmodal
+  data['errormodal'] = errormodal
+  sendMail(data)
+}
 
 function sendMail(data) {
   var params  = jQuery.param( data );
