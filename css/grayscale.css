@@ -73,7 +73,7 @@ a:focus {
   outline: none;
 }
 .navbar-custom a {
-  color: #000000;
+  color: #ffffff;
 }
 .navbar-custom .nav li.active {
   outline: nonte;
@@ -102,20 +102,29 @@ a:focus {
   }
   .top-nav-collapse {
     padding: 0;
-    background-color: #ffffff;
+    background-color: #000000;
   }
   .navbar-custom.top-nav-collapse {
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   }
 }
+
+a.bbq {
+ color: red;
+}
+
+.bbq {
+  color:red;
+}
+
 .intro {
   display: table;
   width: 100%;
   height: 100%;
   padding: 100px 0;
   text-align: center;
-  color: #ffffff;
-  background: url(../img/test1.jpg) no-repeat bottom center scroll;
+  color: #000000;
+  background: url(../img/cantate_50.png) no-repeat bottom center scroll;
   background-color: #ffffff;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -137,10 +146,32 @@ a:focus {
 }
 
 
+
+
 .intro-meezingen {
   font-size: 25px;
   color:red;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.nieuwe-banden {
+  color:#80a919;
+  font-size: 25px;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: left;
+}
+
+.bijpraten{
+   font-size: 25px;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color:#7f7d7e;
+    text-align: left;
+}
+
+.informatie {
+ font-size: 15px;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: left;
 }
 
 @media (min-width: 767px) {
@@ -218,6 +249,8 @@ a:focus {
     -moz-transform: scale(1);
     transform: scale(1);
   }
+
+
 }
 .content-section {
   padding-top: 100px;
@@ -225,6 +258,17 @@ a:focus {
 .download-section {
   width: 100%;
   padding: 50px 0;
+  color: #000000;
+  background-color: #ffffff;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+.bbq-section {
+  width: 100%;
+  padding: 0;
   color: #000000;
   background-color: #ffffff;
   -webkit-background-size: cover;

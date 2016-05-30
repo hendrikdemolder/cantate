@@ -52,6 +52,10 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
+                        <a class="page-scroll bbq" href="#bbq">50 Jaar Cantate! </a>
+                    </li>
+
+                    <li>
                         <a class="page-scroll" href="#about">Over Cantate</a>
                     </li>
                     <li>
@@ -96,22 +100,21 @@
 	</header>
  -->
 
- <header class="intro">
+ <section class="intro">
         <div class="intro-body">
-            
 	      <br>
 	      <br>
+        <div class="row"> </div>
                 <div class="row">
 		        <div class="col-md-8 col-md-offset-2">
-                        <p class="intro-text">In December 2016 zingen we Vivaldi's Gloria en Magnificat
-                        <br><a class="intro-meezingen" href="#meezingen">Meezingen?</a> </p>
                         <a href="#about" class="btn btn-circle page-scroll">
                             <i class="fa fa-angle-double-down animated"></i>
                         </a>
 					</div>
+
             </div>
         </div>
-	</header>
+	</section  >
 
 
 	  <!-- Modal -->
@@ -132,6 +135,118 @@
         </div>
       </div>
     </div>
+
+
+    <!-- Contact Section -->
+    <section id="bbq" class="bbq-section container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Uitnodiging</h2>
+                <p>
+                <div style="text-align: center;">
+
+                <div class="nieuwe-banden col-lg-offset-4 col-lg-4 col-md-offset-4 col-md-4 col-sm-offset-4 col-sm-4">
+                 oude banden<br>  
+                 hernieuwen ...<br>
+                 niewe banden <br>
+                 smeden ...<br>
+                 </div>
+                <div class="bijpraten col-lg-offset-4 col-lg-4 col-md-offset-4 col-md-4 col-sm-offset-4 col-sm-4">
+                of gewoon wat<br>
+                bijpraten bij een hapje <br>
+                en een drankje ... <br>
+                </div>
+                </p>
+                </div>
+
+<p>
+<div class="informatie col-lg-offset-4 col-lg-4 col-md-offset-4 col-md-4 col-sm-offset-4 col-sm-4">
+<p>
+<div>
+Hiervoor nodigen wij u en uw partner/kinderen <br> 
+van harte uit op onze <b>jubileum-barbecue</b> <br>
+op <b>zondag 11 september om 15:00</b><br>
+</div>
+
+</p>
+<div>
+Feestzaal 'Ter Klasse' <br>
+Tielste baan 74 in 3200 Aarschot <br>
+</div>
+
+<p>
+<div>
+Huidige koorleden: <b>gratis</b> <br>
+oud-leden & partners: 15 euro <br>
+kinderen -12jaar: 5 euro  <br>
+dessert inbegrepen - drank niet inbegrepen. <br>
+</div>
+</p>
+<p>
+<div>
+Inschrijven: 
+Tel: 0485 39 90 82 of onderstaand inschrijvings formulier!
+</div>
+</p>
+
+              
+                <!-- Button trigger modal -->
+               <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#bbqModal">
+                Schrijf je in!
+              </button>
+              </div>
+            </div>
+        </div>
+    </section>
+
+
+  <div class="modal fade" id="bbqModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+          <h4 class="modal-title" id="myModalLabel">Schrijf je in voor de BBQ!</h4>
+    <br>
+    <p>
+    Uw inschrijving wordt definitief van zodra u het gepaste bedrag hebt gestort op het rekeningnummer BE49 0016 9744 8971 van Cantate met de vermelding <b>"BBQ + Uw Naam"</b>
+    </p>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+              <div class="form-group">
+                 <label for="name">Naam</label>
+                 <input type="text" class="form-control" id="naam" placeholder="Naam">
+              </div>
+              <div class="form-group">
+                 <label for="emailaddress">Email adres</label>
+                 <input type="email" class="form-control" id="emailaddress" placeholder="Email adres">
+              </div>
+              <div class="form-group">
+                 <label for="Telefoonnummer">Telefoonnummer (Optioneel)</label>
+                 <input type="text" class="form-control" id="telefoon" placeholder="Telefoon Nummer">
+              </div>
+              <div class="form-group">
+                <label for="nrmax3">Aantal huidige koorleden (gratis) </label>
+                <input type="number" class="form-control" id="koorleden" min="0" placeholder="0">
+              </div>
+                 <div class="form-group">
+                <label for="nrmax12">Aantal jonger dan 12 jaar (5 euro) </label>
+                <input type="number" class="form-control" id="nrmax12" min="0" placeholder="0">
+              </div>
+              <div class="form-group">
+                <label for="nrmin12">Aantal volwassenen (ouder dan 12 jaar) (15 euro) </label>
+                <input type="number" class="form-control" id="nrmin12" min="0" placeholder="0">
+              </div>
+            </form>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" onclick="sendbbqMail($('#naam').val(), $('#emailaddress').val(), $('#telefoon').val(),$('#koorleden').val(), $('#nrmax12').val(), $('#nrmin12').val(), '#bbqModal', '#errorModal');" class="btn btn-primary">Verzend gegevens</button>
+      </div>
+        </div>
+    </div>
+  </div>
 
 
 
