@@ -115,29 +115,16 @@ function sendTheMail_brunch(naam, emailaddress, telefoonnummer, nrmax3, nrmax12,
 }
 
 
-function sendTheMail_optreden(naam, emailaddress, telefoonnummer, aantal, aantal_min_18, bericht, formmodal, errormodal) {
-    params_optreden.message.from_email = emailaddress;
-    params_optreden.message.text = 'Ik ' + naam  + ' had graag ' + aantal_min_18 + " -18 Jaar en " +  aantal + ' + "18 Jaar kaarten ontvangen contacteer mij op het volgende emailaddress ' + emailaddress
-    params_optreden.message.text = params_optreden.message.text + '\n' + 'Telefoonnummer: ' + telefoonnummer + '\nExtra: ' + bericht
-    params_success.message.to = []
-    params_success.message.to.push({"email":emailaddress})
-    params_success.message.text = "We hebben uw vraag goed ontvangen! \n We proberen zo snel mogelijk te reageren op je vraag. De volgende kaarten heeft u aangevraagd:"
-    params_success.message.text = params_success.message.text + "\n-18 Jaar: " + aantal_min_18
-    params_success.message.text = params_success.message.text + "\n+ 18 Jaar: " + aantal
-    params_success.message.text = params_success.message.text + '\n Uw inschrijving wordt definitief van zodra u het gepaste bedrag hebt gestort op het rekeningnummer BE49 0016 9744 8971 van Cantate met de vermelding "Concert + uw Naam"'
-    params_success.message.subject = "Kaarten Concert Via Crucis & Requiem"
-    m.messages.send(params_optreden, function(res) {
-         m.messages.send(params_success, function(res) {
-              $(formmodal).modal('hide');
-              return true;
-         }, function(err) {
-           $(formmodal).modal('hide');
-           $(errormodal).modal('show');
-         })
-    }, function(err) {
-      $(formmodal).modal('hide');
-      $(errormodal).modal('show');
-    });
+function sendTheMail_optreden(naam, emailaddress, telefoonnummer, aantal, aantal_min_18, bericht,formmodal, errormodal) {
+  data = {}
+  data['type'] = 'optreden_mail'
+  data['naam'] = naam
+  data['emailaddress'] = emailaddress
+  data['telefoonnummer'] = telefoonnummer
+  data['aantal'] = aantal
+  data['nrmin18']  = aantal_min_18
+  data['bericht']  = bericht
+  data['formmodal'] = formmodal
+  data['errormodal'] = errormodal
+  sendMail(data)
 }
-
-
