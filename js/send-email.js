@@ -85,33 +85,23 @@ function sendMail(data) {
 
 //sendTheMail('Hendrik Demolder', 'hendrik.demolder@gmail.com', '0498430378', 'Ik zou graag meer informatie ontvangen')
 
-function sendTheMail_brunch(naam, emailaddress, telefoonnummer, nrmax3, nrmax12, nrmin12, uuraankomst ,  formmodal, errormodal) {
-    params_brunch.message.from_email = emailaddress;
-    params_brunch.message.text = 'Ik ' + naam  + ' had mij graag ingeschreven voor de brunch. ' + ' emailaddress: ' + emailaddress + ' aantal -3: ' + nrmax3 + ' aantal -11: ' + nrmax12 +' volwassenen :' + nrmin12 +' uur aankomst: ' + uuraankomst
-    params_success.message.to = []
-    params_success.message.to.push({"email":emailaddress})
-    params_success.message.subject = "Inschrijving Brunch Cantate"
-    params_success.message.text = "We hebben uw inschrijving goed ontvangen! \n We proberen zo snel mogelijk te reageren op uw inschrijving:"
-    params_success.message.text = params_success.message.text + "\nInschrijvings Overzicht"
-    params_success.message.text = params_success.message.text + "\n-3 Jaar: " + nrmax3
-    params_success.message.text = params_success.message.text + "\n-11 Jaar: " + nrmax12
-    params_success.message.text = params_success.message.text + "\n+11 Jaar: " + nrmin12
-    params_success.message.text = params_success.message.text + "\nMogelijk aankomst uur: " + uuraankomst
-    params_success.message.text = params_success.message.text + '\n Uw inschrijving wordt definitief van zodra u het gepaste bedrag hebt gestort op het rekeningnummer BE49 0016 9744 8971 van Cantate met de vermelding "Concert + uw Naam"'
-    params_success.message.text = params_success.message.text + "\nNeem contact via info.cantate@gmail.com bij mogelijk problemen!"
-    m.messages.send(params_brunch, function(res) {
-         m.messages.send(params_success, function(res) {
-              $(formmodal).modal('hide');
-              return true;
-         }, function(err) {
-           $(formmodal).modal('hide');
-           $(errormodal).modal('show');
-         })
-    }, function(err) {
-      $(formmodal).modal('hide');
-      $(errormodal).modal('show');
-    });
 
+
+function sendTheMail_brunch(naam, emailaddress, telefoonnummer, nrmax3, nrmax10, volwassenen, uuraankomst , formmodal, errormodal){
+
+  data = {}
+  data['type'] = 'brunch_mail'
+  data['naam'] = naam
+  data['emailaddress'] = emailaddress
+  data['telefoonnummer'] = telefoonnummer
+  data['nrmax3'] = nrmax3
+  data['nrmax10']  = nrmax10
+  data['volwassenen'] = volwassenen
+  data['uuraankomst']  = uuraankomst
+  data['formmodal'] = formmodal
+  data['errormodal'] = errormodal
+  console.log(data)
+  sendMail(data)
 }
 
 

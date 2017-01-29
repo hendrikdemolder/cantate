@@ -51,9 +51,7 @@
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
-                    <li>
-                         <a class="page-scroll navbar-brand light" href="#vivaldi">Jubileum Concert!</a>
-                    </li>
+
                     <li>
                         <a class="page-scroll" href="#about">Over Cantate</a>
                     </li>
@@ -113,6 +111,17 @@
                             <i class="fa fa-angle-double-down animated"></i>
                         </a>
 					</div>
+
+          <div class="col-md-8 col-md-offset-2">
+             <button class="brunch btn btn-link" data-toggle="modal" data-target="#brunchModal">
+
+
+
+              <h4>
+              Bestel Toegangskaarten voor de Brunch!
+              </h4>
+             </button>
+           </div>
 
             </div>
         </div>
@@ -205,28 +214,28 @@
         <div class="modal-body">
           <form role="form">
               <div class="form-group">
-                 <label for="name">Naam</label>
-                 <input type="text" class="form-control" id="naam" placeholder="Naam">
+                 <label for="naam_brunch">Naam</label>
+                 <input type="text" class="form-control" id="naam_brunch" placeholder="Naam">
               </div>
               <div class="form-group">
-                 <label for="emailaddress">Email adres</label>
-                 <input type="email" class="form-control" id="emailaddress" placeholder="Email adres">
+                 <label for="emailaddress_brunch">Email adres</label>
+                 <input type="email" class="form-control" id="emailaddress_brunch" placeholder="Email adres">
               </div>
               <div class="form-group">
-                 <label for="Telefoonnummer">Telefoonnummer (Optioneel)</label>
-                 <input type="text" class="form-control" id="telefoon" placeholder="Telefoon Nummer">
+                 <label for="telefoon_brunch">Telefoonnummer (Optioneel)</label>
+                 <input type="text" class="form-control" id="telefoon_brunch" placeholder="Telefoon Nummer">
               </div>
               <div class="form-group">
-              	<label for="nrmax3">Aantal deelnemers jonger dan 3 jaar (gratis) </label>
+              	<label for="nrmax3">Aantal deelnemers tot 3 jaar (gratis) </label>
               	<input type="number" class="form-control" id="nrmax3" min="0" placeholder="0">
               </div>
-                 <div class="form-group">
-              	<label for="nrmax12">Aantal Deelnemers tussen 3 en 11 jaar (8 euro) </label>
-              	<input type="number" class="form-control" id="nrmax12" min="0" placeholder="0">
+              <div class="form-group">
+              	<label for="nrmax10">Aantal Deelnemers tot 10 jaar.(8 euro) </label>
+              	<input type="number" class="form-control" id="nrmax10" min="0" placeholder="0">
               </div>
               <div class="form-group">
-              	<label for="nrmin12">Aantal volwassenen (ouder dan 11 jaar) (15 euro) </label>
-              	<input type="number" class="form-control" id="nrmin12" min="0" placeholder="0">
+              	<label for="volwassenen">Aantal volwassenen (ouder dan 11 jaar) (15 euro) </label>
+              	<input type="number" class="form-control" id="volwassenen" min="0" placeholder="0">
               </div>
               <div class="form-group">
               	<label for="uuraankomst">Uur van aankomst (optioneel)</label>
@@ -237,7 +246,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <button type="button" onclick="sendTheMail_brunch($('#naam').val(), $('#emailaddress').val(), $('#telefoon').val(),$('#nrmax3').val(), $('#nrmax12').val(), $('#nrmin12').val(), $('#uuraankomst').val(), '#brunchModal', '#errorModal');" class="btn btn-primary">Verzend gegevens</button>
+          <button type="button" onclick="sendTheMail_brunch($('#naam_brunch').val(), $('#emailaddress_brunch').val(), $('#telefoon_brunch').val(),$('#nrmax3').val(), $('#nrmax10').val(), $('#volwassenen').val(), $('#uuraankomst').val(), '#brunchModal', '#errorModal');" class="btn btn-primary">Verzend gegevens</button>
       </div>
         </div>
     </div>
@@ -296,58 +305,6 @@
 
 
 
-    <!-- About Section -->
-    <section id="vivaldi" class="about-section container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <div class="vivaldititel col-lg-offset-4 col-lg-4 col-md-offset-4 col-md-4 col-sm-offset-4 col-sm-4"> 
-                VIVALDI
-                <div class=vivaldicontent>
-                      Magnificat
-                </div>
-                    <div class=vivaldicontent>
-                      Gloria
-                </div>
-                                <p></p> 
-                <p></p>
-
-                </div>                                 
-                <div class="vivaldilocatie col-lg-offset-4 col-lg-4 col-md-offset-4 col-md-4 col-sm-offset-4 col-sm-4"> 
-                O.L.V Kerk Aarschot <br>
-                ZATERDAG <br>
-                17 DECEMBER 2016<br>
-                OM 20 U
-                               <p></p>
-                <p></p>
-                </div>
-
-                <div class="vivaldikoor col-lg-offset-4 col-lg-4 col-md-offset-4 col-md-4 col-sm-offset-4 col-sm-4">
-                KOOR CANTATE AARSCHOT
-                O.L.V TINEKE VERLOOY
-                        <p></p>
-                <p></p>
-                </div>
-        
-                <div class="vivaldisolisten col-lg-offset-4 col-lg-4 col-md-offset-4 col-md-4 col-sm-offset-4 col-sm-4">
-                 > Ria Struyven (sopraan)<br>
-                 > Veerle Henkens (mezzo) <br>
-                 > Bart Ipers (bas) <br>
-                 > Cordes en bleu (strijkkwartet)<br>
-                 > Sandra Van der Gucht (continuo)<br>
-
-                               
-
-                </div>
- <div class="col-lg-offset-4 col-lg-4 col-md-offset-4 col-md-4 col-sm-offset-4 col-sm-4">
-   <p></p>
-                                <p></p>
-             <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#concertModal">
-                Reserveer je Kaarten!
-             </button>
-</div>
-            </div>
-        </div>
-    </section>
 
 
 
@@ -544,7 +501,7 @@ neem dan gerust contact op! Klik hiervoor op “meezingen”
     <!-- Footer -->
     <footer>
         <div class="container text-center">
-            <p>Copyright &copy; Cantate 2016  </p>
+            <p>Copyright &copy; Cantate 2017  </p>
         </div>
     </footer>
 
