@@ -21,6 +21,13 @@
     <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
 
+    <style>
+    .galleria{ max-width: 100%; height: 100%; background: #000 }
+
+    </style>
+
+
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -474,8 +481,23 @@ neem dan gerust contact op! Klik hiervoor op “meezingen”
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
                     <h2 class=media>Media</h2>
-                    <h3 class=media-intro> Bekijk audio of video van vorige concerten en activiteiten</h3>
-                    <h3 class=media-intro> (UNDER CONSTRUCTION)</h3>
+
+                    <h4> Vivaldi (Gloria - Magnificat)
+                      <p></p>
+                    <div class="video-container"><iframe src="https://drive.google.com/file/d/0BxKU5Cf-k4A9ZUlvYVZPckdzVFE/preview" width="640" height="480"></iframe>
+                    </div>
+
+
+                    <h4> Affiches vorige concerten en activiteiten.</h3>
+                    <div class="galleria" id="galleria_affiches">
+                    </div>
+                    <p></p>
+                    <h4> Sfeer fotos koor!</h3>
+                    <p> </p>
+                    <div class="galleria" id="galleria_koor">
+                    </div>
+
+
                 </div>
             </div>
         </section>
@@ -508,17 +530,74 @@ neem dan gerust contact op! Klik hiervoor op “meezingen”
     <!-- jQuery Version 1.11.0 -->
     <script src="js/jquery-1.11.0.js"></script>
 
+
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
     <!-- Plugin JavaScript -->
     <script src="js/jquery.easing.min.js"></script>
 
+
     <!-- Custom Theme JavaScript -->
     <script src="js/grayscale.js"></script>
+    <script type="text/javascript" src="js/send-email.js"></script>
+    <script src="js/galleria/galleria-1.5.4.min.js"></script>
+    <script src="js/galleria/plugins/flickr/galleria.flickr.min.js"></script>
 
-     <script type="text/javascript" src="https://mandrillapp.com/api/docs/js/mandrill.js"></script>
-     <script type="text/javascript" src="js/send-email.js"></script>
+
+
+    <script>
+    (function() {
+      Galleria.loadTheme('js/galleria/themes/classic/galleria.classic.min.js');
+      Galleria.run('#galleria_affiches', {
+        height: 0.5,
+        flickr: 'set:72157678575562892',
+        flickrOptions: {
+        sort: 'date-posted-asc'
+      },
+        extend: function(options) {
+          this.play(4000);
+
+          // listen to when an image is shown
+          this.bind('image', function(e) {
+        // lets make galleria open a lightbox when clicking the main image:
+        $(e.imageTarget).click(this.proxy(function() {
+           this.openLightbox();
+        }));
+    });
+}
+
+
+    });
+    }());
+
+
+    (function() {
+      Galleria.loadTheme('js/galleria/themes/classic/galleria.classic.min.js');
+      Galleria.run('#galleria_koor', {
+        height: 0.5,
+        flickr: 'set:72157680747948946',
+        flickrOptions: {
+        sort: 'date-posted-asc'
+      },
+        extend: function(options) {
+          this.play(4000);
+
+          // listen to when an image is shown
+          this.bind('image', function(e) {
+        // lets make galleria open a lightbox when clicking the main image:
+        $(e.imageTarget).click(this.proxy(function() {
+           this.openLightbox();
+        }));
+    });
+}
+
+
+    });
+    }());
+    </script>
+
+
 
 </body>
 
