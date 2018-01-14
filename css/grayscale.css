@@ -364,11 +364,12 @@ a.bbq {
   color: #ffffff;
   text-shadow: 0 0 10px black;
   background-color: #ffffff;
-  background: url(../img/meezingen-bg.jpg) no-repeat bottom center scroll;
+  background: url(../img/meezingen-bg-2.jpg) no-repeat bottom center scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
+  padding-bottom: 250px;
 }
 .media-section {
   width: 100%;
@@ -385,11 +386,13 @@ a.bbq {
   padding: 100px;
   color: #ffffff;
   background-color: #000000;
-  background: url(../img/contact-bg.jpg) no-repeat bottom center scroll;
+  background: url(../img/contact-bg-3.jpg) no-repeat bottom center scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
+  padding-bottom: 250px;
+
 }
 #map {
   width: 100%;
