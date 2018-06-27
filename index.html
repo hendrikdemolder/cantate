@@ -20,6 +20,8 @@
     <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://vjs.zencdn.net/7.0.3/video-js.css" rel="stylesheet">
+
 
     <style>
     .galleria{ max-width: 100%; height: 100%; background: #000 }
@@ -123,6 +125,11 @@
             </div>
         </div>
 	</section  >
+
+  <section class="intropart2">
+    <div class="intropart2-body">
+    </div>
+  </section>
 
 
 	  <!-- Modal -->
@@ -536,28 +543,53 @@ All things bright and beautiful (John Rutter)<br>
 
                     <h4> Vivaldi (Gloria - Magnificat)
                       <p></p>
-                    <div class="video-container"><iframe src="https://drive.google.com/file/d/0BxKU5Cf-k4A9ZUlvYVZPckdzVFE/preview" width="640" height="480"></iframe>
-                    </div>
-
+                       <div class="video-container">
+                        <video id="my-video" class="video-js" controls preload="auto" width="640" height="480" 
+                          data-setup="{}">
+                         <source src="https://s3.eu-central-1.amazonaws.com/cantate-aarschot/Vivaldi+-+Magnificat%2C+fragment+deel+1+(Cantate+2016).mp4" type='video/mp4'>
+                        <p class="vjs-no-js">
+                          To view this video please enable JavaScript, and consider upgrading to a web browser that
+                          <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                        </p>
+                       </video>
+                     </div>
                     <h4> Kerst Concert 2017</h4>
          
-                    
+                      <video id="my-video" class="video-js" controls preload="auto" width="640" height="480" 
+                          data-setup="{}">
+                         <source src="https://s3.eu-central-1.amazonaws.com/cantate-aarschot/IMG_1876.MOV" type='video/mp4'>
+                        <p class="vjs-no-js">
+                          To view this video please enable JavaScript, and consider upgrading to a web browser that
+                          <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                        </p>
+                       </video>
            
                     <p></p>
 
-                    <div class="video-container"><iframe src=" https://drive.google.com/file/d/1hKl81B2HOr8L1xlKOPGO4RbXNIas0G9_/preview" width="640" height="480"></iframe>
+                    <div class="video-container">
+                        <video id="my-video" class="video-js" controls preload="auto" width="640" height="480" 
+                          data-setup="{}">
+                         <source src="https://s3.eu-central-1.amazonaws.com/cantate-aarschot/IMG_1872.MOV" type='video/mp4'>
+                        <p class="vjs-no-js">
+                          To view this video please enable JavaScript, and consider upgrading to a web browser that
+                          <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                        </p>
+                       </video>
                     </div>
 
                     <p></p>
-                    <div class="video-container"><iframe src=" https://drive.google.com/file/d/1zVLpv8H-T1LKqCWW2fbV8MKTGrJMHWI-/preview" width="640" height="480"></iframe>
+                    <div class="video-container">
+                        <video id="my-video" class="video-js" controls preload="auto" width="640" height="480" 
+                          data-setup="{}">
+                         <source src="https://s3.eu-central-1.amazonaws.com/cantate-aarschot/IMG_1877.MOV" type='video/mp4'>
+                        <p class="vjs-no-js">
+                          To view this video please enable JavaScript, and consider upgrading to a web browser that
+                          <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                        </p>
+                       </video>
                     </div>
                     
-
                     <p></p>
-                    <div class="video-container"><iframe src=" https://drive.google.com/file/d/1wn-udYWIXZ3H10XQIikGK20dowo3wW_-/preview" width="640" height="480"></iframe>
-                    </div>
-                    <p></p>
-
 
                     <h4> Affiches vorige concerten en activiteiten.</h3>
                     <div class="galleria" id="galleria_affiches">
@@ -615,6 +647,8 @@ All things bright and beautiful (John Rutter)<br>
     <script type="text/javascript" src="js/send-email.js"></script>
     <script src="js/galleria/galleria-1.5.4.min.js"></script>
     <script src="js/galleria/plugins/flickr/galleria.flickr.min.js"></script>
+    <script src="https://vjs.zencdn.net/7.0.3/video.js"></script>
+
 
 
 

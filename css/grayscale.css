@@ -128,12 +128,28 @@ a.bbq {
   padding: 100px 0;
   text-align: center;
   color: #000000;
-  background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;
+  background: url(../img/jenkins-part1.jpg) no-repeat bottom center scroll;
   background-color: #000000;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+}
+
+
+.intropart2 {
+  display: table;
+  width: 100%;
+  height: 100%;
+  padding: 100px 0;
+  text-align: center;
+  color: #000000;
+  background: url(../img/jenkins-part2.jpg) no-repeat bottom center scroll;
+  background-color: #000000;
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  background-size: 100% 100%;
+  -o-background-size: 100% 100%;
 }
 
 .video-container {
@@ -142,6 +158,7 @@ a.bbq {
 	padding-top:30px;
 	height:0;
 	overflow:hidden;
+  margin:0 auto;
 }
 
 .video-container iframe, .video-container object, .video-container embed {
