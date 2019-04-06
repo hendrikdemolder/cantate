@@ -128,12 +128,12 @@ a.bbq {
   padding: 100px 0;
   text-align: center;
   color: #000000;
-  background: url(../img/brunch2019.jpg) no-repeat bottom center scroll;
-  background-color: #c3c4b2;
-  -webkit-background-size: contain;
-  -moz-background-size:  contain;
-  background-size:  contain;
-  -o-background-size: contain;
+  background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;
+  background-color: #000000;
+  -webkit-background-size: cover;
+  -moz-background-size:  cover;
+  background-size:  cover;
+  -o-background-size: cover;
 }
 
 
